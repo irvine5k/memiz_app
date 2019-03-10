@@ -1,15 +1,24 @@
-# quiz_app
+# Memiz
 
-A new Flutter project.
+A quiz example built in Flutter.
 
-## Getting Started
+## Requirements
 
-This project is a starting point for a Flutter application.
+Dart SDK
+Flutter SDK
+Android Studio
+An android device(or emulator)
 
-A few resources to get you started if this is your first Flutter project:
+## How to run
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+Setup your android device or emulator.
+
+```bash
+    cd memiz_app
+    flutter run
+```
+
+
 
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.io/docs), which offers tutorials, 
