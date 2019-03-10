@@ -4,10 +4,10 @@ A quiz example built in Flutter.
 
 ## Requirements
 
-Dart SDK
-Flutter SDK
-Android Studio
-An android device(or emulator)
+- Dart SDK
+- Flutter SDK
+- Android Studio
+- An android device(or emulator)
 
 ## How to run
 
