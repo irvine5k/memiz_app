@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './landing_page.dart';
+
 class ScorePage extends StatelessWidget{
   final int score;
   final int totalQuestions;
@@ -28,7 +30,11 @@ class ScorePage extends StatelessWidget{
             icon: new Icon(Icons.arrow_right),
             color: Colors.white,
             iconSize: 50.0,
-            onPressed: () => print("Cool"),
+            onPressed: () => Navigator.of(context)
+              .pushAndRemoveUntil(
+                new MaterialPageRoute(builder: (BuildContext context) => new LandingPage()), 
+                (Route route) => route == null 
+              ),
           )
         ],
       ),
