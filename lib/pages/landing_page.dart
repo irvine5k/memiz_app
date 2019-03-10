@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './quiz_page.dart';
 
 class LandingPage extends StatelessWidget{
 
@@ -6,26 +7,22 @@ class LandingPage extends StatelessWidget{
   Widget build(BuildContext context){
     return new Material(
       color: Colors.greenAccent,
-      
       child: new InkWell(
-        onTap: () => print("We tapped the page"),
-
+        onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+          builder: (BuildContext context) => new QuizPage())),
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
-
           children: <Widget>[
             new Text("Memiz!", style: new TextStyle(
               color: Colors.white,
               fontSize: 50.0,
               fontWeight: FontWeight.bold
             )),
-
             new Text("Toque para começar!", style: new TextStyle(
               color: Colors.white,
               fontSize: 20.0,
               fontWeight: FontWeight.bold
             ))
-
           ],
         ),
       ),

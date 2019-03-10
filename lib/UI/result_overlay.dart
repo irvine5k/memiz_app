@@ -25,8 +25,15 @@ class ResultOverlayState extends State<ResultOverlay> with SingleTickerProviderS
     _iconAnimation = new CurvedAnimation(parent: _iconAnimationController, curve: Curves.elasticOut);
     _iconAnimation.addListener(() => this.setState(() {}));
     _iconAnimationController.forward();
-
   }
+
+  @override
+  void dispose(){
+    _iconAnimationController.dispose();
+
+    super.dispose();
+  }
+  
   @override
   Widget build(BuildContext context){
     return new Material(

@@ -7,6 +7,8 @@ import '../UI/answer_button.dart';
 import '../UI/question_text.dart';
 import '../UI/result_overlay.dart'; 
 
+import '../pages/score_page.dart';
+
 class QuizPage extends StatefulWidget{
   @override
   State createState() => new QuizPageState();
@@ -62,6 +64,11 @@ class QuizPageState extends State<QuizPage> {
         overlayShouldBeVisible == true ? new ResultOverlay(
           isCorrect,
           (){
+            if(quiz.lenght == questionNumber){
+              Navigator.of(context).push(new MaterialPageRoute(
+                builder: (BuildContext context) => new ScorePage(quiz.score, quiz.lenght)));
+              return;
+            } 
             currentQuestion = quiz.nextQuestion;
             this.setState(() {
               overlayShouldBeVisible = false;
